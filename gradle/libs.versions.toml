@@ -1,0 +1,21 @@
+[versions]
+# Fabric (https://fabricmc.net/develop/)
+loom = "1.17-SNAPSHOT"
+minecraft = "1.21.11"
+yarn = "1.21.11+build.6"
+fabric-loader = "0.19.3"
+fabric-api = "0.141.5+1.21.11"
+
+# https://maven.dupers.wtf/#/releases/wtf/dupers/dupersunited
+dupersunited = "1.0.0+1.21.11"
+
+[libraries]
+minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
+yarn = { module = "net.fabricmc:yarn", version.ref = "yarn" }
+fabric-loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric-loader" }
+fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric-api" }
+
+dupersunited = { module = "wtf.dupers:dupersunited", version.ref = "dupersunited" }
+
+[plugins]
+fabric-loom = { id = "fabric-loom", version.ref = "loom" }

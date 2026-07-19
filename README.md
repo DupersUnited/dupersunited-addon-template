@@ -1,9 +1,10 @@
-# Example Mod
+# DupersUnited Addon Template
 
-## Setup
+## How to use
 
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
+Click the green `Use this template` button in the top right corner of this page.  
+This will create a new repository with this template and a clean history.
 
 ## License
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+This template is available under the CC0 license.
