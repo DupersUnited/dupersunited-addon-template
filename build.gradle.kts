@@ -13,15 +13,19 @@ repositories {
         name = "DupersWtf"
         url = uri("https://maven.dupers.wtf/releases")
     }
+    // remove when 1.0.6 releases, in template & for addon devs - khao
+    // https://github.com/DupersUnited/dupersunited-mod/commit/782ea8caf2be942131f62d68948eb49725fa1dc9
+    maven {
+        url = uri("https://maven.xpple.dev/maven2")
+    }
 }
 
 dependencies {
     minecraft(libs.minecraft)
-    mappings(variantOf(libs.yarn) { classifier("v2") })
-    modImplementation(libs.fabric.loader)
-    modImplementation(libs.fabric.api)
+    implementation(libs.fabric.loader)
+    implementation(libs.fabric.api)
 
-    modImplementation(libs.dupersunited)
+    implementation(libs.dupersunited)
 }
 
 tasks {
@@ -38,7 +42,7 @@ tasks {
 
     java {
         toolchain {
-            languageVersion.set(JavaLanguageVersion.of(21))
+            languageVersion.set(JavaLanguageVersion.of(25))
         }
     }
 
@@ -52,6 +56,6 @@ tasks {
 
     withType<JavaCompile>().configureEach {
         options.encoding = "UTF-8"
-        options.release.set(21)
+        options.release.set(25)
     }
 }
